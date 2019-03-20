@@ -132,15 +132,15 @@
                  <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="{{url('personas/votosjuntas')}}"><i class="fa fa-circle-o"></i> Votos x Candidatos</a></li>
-                <li><a href="{{url('ventas/totales')}}"><i class="fa fa-circle-o"></i> Totales</a></li>
+                <li><a href="{{url('votos/votosjuntas')}}"><i class="fa fa-circle-o"></i> Votos x Candidatos</a></li>
+                <li><a href="{{url('votos/totales')}}"><i class="fa fa-circle-o"></i> Totales</a></li>
 
               </ul>
             </li>
 
 
 
-          
+
 
           </ul>
         </section>
