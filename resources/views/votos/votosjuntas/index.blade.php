@@ -3,7 +3,7 @@
 
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-		<h3>Listado de Candidatos <a href="/personas/candidatos/create"><button class="btn btn-success">Nuevo</button></a> </h3>
+	<!--	<h3>Votos x Junta <a href="/personas/candidatos/create"><button class="btn btn-success">Nuevo</button></a> </h3>-->
 		@include('personas.candidatos.search')
 	</div>
 </div>

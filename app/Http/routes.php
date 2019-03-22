@@ -22,3 +22,5 @@ Route::resource('sitios/recintos','RecintoController');
 Route::resource('sitios/juntas','JuntaController');
 Route::resource('personas/dignidades','DignidadController');
 Route::resource('personas/candidatos','CandidatoController');
+Route::resource('votos/votosjuntas','VotosJuntaController');
+Route::get('votos/votosjuntas/{id}','VotosJuntaController@show');
