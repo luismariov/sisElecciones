@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Redirect;
 use sisElecciones\Http\Requests\VotosJuntaFormRequest;
 use sisElecciones\VotosJunta;
 use sisElecciones\Candidato;
+use sisElecciones\Dignidad;
+use sisElecciones\Provincia;
+use sisElecciones\Canton;
 use DB;
 
 
@@ -27,7 +30,7 @@ class VotosJuntaController extends Controller
         $query=trim($request->get('searchText'));
   			$candidatos=DB::table('candidato as c')
   			->join('dignidad as d', 'c.iddignidad','=','d.iddignidad')
-  			->select('c.idcandidato','c.nombre','d.nombre AS dignidad','d.lugar')
+  			->select('c.idcandidato','c.nombre','d.lugar','d.nombre as dignidad')
   			->where('c.nombre','LIKE','%'.$query.'%')
   			->orwhere('d.nombre','LIKE','%'.$query.'%')
   			->orderBy('c.idcandidato','asc')
@@ -54,7 +57,16 @@ class VotosJuntaController extends Controller
 
   public function show ($id){
 
-        return view ('votos.votosjuntas.create',[ 'candidato' => Candidato::findOrFail($id)]);
+
+        $candidato=Candidato::findOrFail($id);
+        $dignidad=Dignidad::all();
+        $provincia=Provincia::all();
+        return view("votos.votosjuntas.create",['candidato'=>$candidato,'dignidad'=>$dignidad,'provincia'=>$provincia]);
+        //return view ('votos.votosjuntas.create',[ 'candidato' => Candidato::findOrFail($id), 'prueba'=> $prubas]);
+
+
+
+
 
   }
 

@@ -5,7 +5,7 @@
 	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 		<h3>Nueva Dignidad</h3>
 		@if (count($errors)>0)
-		<div class="alert alert-danger"> 
+		<div class="alert alert-danger">
 			<ul>
 				@foreach($errors->all() as $error)
 				<li>{{$error}}</li>
@@ -54,8 +54,8 @@
 				</select>
 			</div>
 
-			
-			
+
+
 			<div class="form-group">
 				<button class="btn btn-primary" type="submit">Guardar</button>
 				<button class="btn btn-danger" type="reset">Cancelar</button>
@@ -67,7 +67,7 @@
 
 			$(document).ready(function(){
 				ocultar();
-				setTimeout(refrescar,20000);
+				setTimeout(refrescar,160000);
 				$('#slt_dignidad').change(function(){
 				nombre =$("#slt_dignidad option:selected").text();
 				switch(nombre)
@@ -116,7 +116,7 @@
 			});
 
 
-		
+
 
 		function ocultar()
 		{

@@ -12,7 +12,7 @@ use DB;
 
 class DignidadController extends Controller
 {
-    
+
 	public function __construct()
 	{
 
@@ -43,7 +43,7 @@ class DignidadController extends Controller
     {
     	$dignidad = new Dignidad;
     	$dignidad->nombre=$request->get('nombre');
-        $dignidad->lugar=$request->get('lugar');
+      $dignidad->lugar=$request->get('lugar');
     	$dignidad->save();
     	return Redirect::to('personas/dignidades');
     }
@@ -60,7 +60,7 @@ class DignidadController extends Controller
     }
 
     public function update(CantonFormRequest $request, $id)
-    { 
+    {
     		$dignidad = Dignidad::findOrFail($id);
     		$dignidad->nombre=$request->get('nombre');
             $dignidad->lugar=$request->get('lugar');
